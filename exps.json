@@ -1,0 +1,90 @@
+[
+  {
+    "job_name": "nmp_base_4core_4MB_join", 
+    "obj_type": "FlexusJobSet", 
+    "input_ckpt_folder": "/mnt/parsafiler1/vol3/users/daglis/simics_ckps/", 
+    "input_ckpt_file": "base_1core_4GB_ready_io", 
+    "classes": [
+      "phase", 
+      "subphase", 
+      "flexpoint", 
+      "timing"
+    ], 
+    "classes_ckpt_type": [
+      "bp", 
+      "inst", 
+      "inst", 
+      "none"
+    ], 
+    "load_same_level_ckpt": false, 
+    "guest_cmd": "\"/host/net/parsafiler4/users/ustiugov/isca17/bins/mchashjoins_nmp1_gs -r 4194304 -s 4194304 -n 1 -a PRH --join \\n\"", 
+    "base_run_folder": "/net/parsafiler4/users/ustiugov/isca17/exps_nmp_only_probe_all/nmp_base_1core_64MB_join/run", 
+    "base_ckpt_folder": "/net/parsafiler4/users/ustiugov/isca17/exps_nmp_only_probe_all/nmp_base_1core_64MB_join/ckpts"
+  }, 
+  {
+    "job_name": "nmp_base_4core_4MB_scan", 
+    "obj_type": "FlexusJobSet", 
+    "input_ckpt_folder": "/net/parsafiler4/users/ustiugov/isca17/simics/1_core", 
+    "classes": [
+      "phase", 
+      "subphase", 
+      "flexpoint", 
+      "timing"
+    ], 
+    "classes_ckpt_type": [
+      "bp", 
+      "inst", 
+      "inst", 
+      "none"
+    ], 
+    "load_same_level_ckpt": false, 
+    "guest_cmd": "\"/host/net/parsafiler4/users/ustiugov/isca17/bins/mchashjoins_nmp1_gs -r 4194304 -s 4194304 -n 1 -a PRH --join \\n\"", 
+    "input_ckpt_file": "base_1core_4GB_ready_io", 
+    "base_run_folder": "/net/parsafiler4/users/ustiugov/isca17/exps_nmp_only_probe_all/nmp_base_1core_64MB_join/run", 
+    "base_ckpt_folder": "/net/parsafiler4/users/ustiugov/isca17/exps_nmp_only_probe_all/nmp_base_1core_64MB_join/ckpts"
+  }, 
+  {
+    "job_name": "cpu_4core_4MB_join", 
+    "obj_type": "FlexusJobSet", 
+    "input_ckpt_folder": "/net/parsafiler4/users/ustiugov/isca17/simics/1_core", 
+    "classes": [
+      "phase", 
+      "subphase", 
+      "flexpoint", 
+      "timing"
+    ], 
+    "classes_ckpt_type": [
+      "bp", 
+      "inst", 
+      "inst", 
+      "none"
+    ], 
+    "load_same_level_ckpt": false, 
+    "guest_cmd": "\"/host/net/parsafiler4/users/ustiugov/isca17/bins/mchashjoins_nmp1_gs -r 4194304 -s 4194304 -n 1 -a PRH --join \\n\"", 
+    "input_ckpt_file": "base_1core_4GB_ready_io", 
+    "base_run_folder": "/net/parsafiler4/users/ustiugov/isca17/exps_nmp_only_probe_all/nmp_base_1core_64MB_join/run", 
+    "base_ckpt_folder": "/net/parsafiler4/users/ustiugov/isca17/exps_nmp_only_probe_all/nmp_base_1core_64MB_join/ckpts"
+  }, 
+  {
+    "job_name": "cpu_4core_4MB_scan", 
+    "obj_type": "FlexusJobSet", 
+    "input_ckpt_folder": "/net/parsafiler4/users/ustiugov/isca17/simics/1_core", 
+    "classes": [
+      "phase", 
+      "subphase", 
+      "flexpoint", 
+      "timing"
+    ], 
+    "classes_ckpt_type": [
+      "bp", 
+      "inst", 
+      "inst", 
+      "none"
+    ], 
+    "load_same_level_ckpt": false, 
+    "guest_cmd": "\"/host/net/parsafiler4/users/ustiugov/isca17/bins/mchashjoins_nmp1_gs -r 4194304 -s 4194304 -n 1 -a PRH --join \\n\"", 
+    "input_ckpt_file": "base_1core_4GB_ready_io", 
+    "base_run_folder": "/net/parsafiler4/users/ustiugov/isca17/exps_nmp_only_probe_all/nmp_base_1core_64MB_join/run", 
+    "base_ckpt_folder": "/net/parsafiler4/users/ustiugov/isca17/exps_nmp_only_probe_all/nmp_base_1core_64MB_join/ckpts"
+  }
+]

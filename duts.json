@@ -1,0 +1,107 @@
+[
+  {
+    "name": "cpu-loopback-4cores", 
+    "obj_type": "DeviceUnderTest", 
+    "sim_config_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/cpu-4cores", 
+    "simulator_path": {
+      "timing": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2SharedNUCA.OoO_v9_iface_gcc.so", 
+      "trace": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2Shared.Trace_v9_iface_gcc.so"
+    }
+  }, 
+  {
+    "name": "cpu-dramsim-4cores", 
+    "obj_type": "DeviceUnderTest", 
+    "sim_config_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/cpu-4cores", 
+    "simulator_path": {
+      "timing": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2SharedNUCA.DRAMSim.OoO_v9_iface_gcc.so", 
+      "trace": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2Shared.Trace_v9_iface_gcc.so"
+    }
+  }, 
+  {
+    "name": "cpu-16cores", 
+    "obj_type": "DeviceUnderTest", 
+    "sim_config_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/cpu-16cores", 
+    "simulator_path": {
+      "timing": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2SharedNUCA.DRAMSim.OoO_v9_iface_gcc.so", 
+      "trace": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2Shared.Trace_v9_iface_gcc.so"
+    }
+  }, 
+  {
+    "name": "nmp-loopback-1core", 
+    "obj_type": "DeviceUnderTest", 
+    "sim_config_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/nmp-1core", 
+    "simulator_path": {
+      "timing": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_NMP.Loopback_v9_iface_gcc.so", 
+      "trace": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2Shared.Trace_v9_iface_gcc.so"
+    }
+  },
+  {
+    "name": "nmp-dramsim-1core", 
+    "obj_type": "DeviceUnderTest", 
+    "sim_config_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/nmp-1core", 
+    "simulator_path": {
+      "timing": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_NMP.DRAMSim_v9_iface_gcc.so", 
+      "trace": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2Shared.Trace_v9_iface_gcc.so"
+
+    }
+  },
+  {
+    "name": "nmp-loopback-4core", 
+    "obj_type": "DeviceUnderTest", 
+    "sim_config_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/nmp-4cores", 
+    "simulator_path": {
+      "timing": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_NMP.Loopback_v9_iface_gcc.so", 
+      "trace": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2Shared.Trace_v9_iface_gcc.so"
+
+    }
+  },
+  {
+    "name": "nmp-dramsim-4core", 
+    "obj_type": "DeviceUnderTest", 
+    "sim_config_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/nmp-4cores", 
+    "simulator_path": {
+      "timing": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_NMP.DRAMSim_v9_iface_gcc.so", 
+      "trace": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2Shared.Trace_v9_iface_gcc.so"
+
+    }
+  },
+  {
+    "name": "nmp-64core", 
+    "obj_type": "DeviceUnderTest", 
+    "sim_config_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/nmp-64cores", 
+    "simulator_path": {
+      "timing": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_NMP.DRAMSim_v9_iface_gcc.so", 
+      "trace": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2Shared.Trace_v9_iface_gcc.so"
+
+    }
+  },
+  {
+    "name": "nmp-loopback-4core-pp", 
+    "obj_type": "DeviceUnderTest", 
+    "sim_config_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/nmp-4cores-pp", 
+    "simulator_path": {
+      "timing": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_NMP.Loopback_v9_iface_gcc.so", 
+      "trace": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2Shared.Trace_v9_iface_gcc.so"
+
+    }
+  },
+  {
+    "name": "nmp-dramsim-4core-pp", 
+    "obj_type": "DeviceUnderTest", 
+    "sim_config_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/nmp-4cores-pp", 
+    "simulator_path": {
+      "timing": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_NMP.DRAMSim_v9_iface_gcc.so", 
+      "trace": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2Shared.Trace_v9_iface_gcc.so"
+
+    }
+  },
+  {
+    "name": "nmp-64core-pp", 
+    "obj_type": "DeviceUnderTest", 
+    "sim_config_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/nmp-64cores-pp", 
+    "simulator_path": {
+      "timing": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_NMP.DRAMSim_v9_iface_gcc.so", 
+      "trace": "/home/drumond/storage/parsafiler2/mondrian-experiments/resources/simulators/libflexus_CMP.L2Shared.Trace_v9_iface_gcc.so"
+    }
+  }    
+]

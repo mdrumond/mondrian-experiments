@@ -27,3 +27,17 @@
 *.exe
 *.out
 *.app
+
+*.a.fresh
+*_gcc
+*_o
+*_gcc_o
+*_gcc_dep
+*stats_o
+*.pyc
+
+# Emacs crap
+.\#*
+
+# Simulators folders
+resources/simulators

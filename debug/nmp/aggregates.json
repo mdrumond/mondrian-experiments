@@ -6,7 +6,9 @@
         "obj_type": "JobAggregate", 
         "hier_ranges": [
             {"obj_type" : "HierRange",
-             "levels" : [], "ckpt_count" : 3}
+             "levels" : [], "ckpt_count" : 3},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1]], "ckpt_count" : 1, "inst_per_ckpt" : 400000}            
         ]
     },
     {
@@ -16,7 +18,9 @@
         "obj_type": "JobAggregate", 
         "hier_ranges": [
             {"obj_type" : "HierRange",
-             "levels" : [], "ckpt_count" : 3}
+             "levels" : [], "ckpt_count" : 3},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1]], "ckpt_count" : 1, "inst_per_ckpt" : 400000}
         ]
     }
 ]

@@ -5,9 +5,8 @@
       "input_ckpt_folder": "/home/drumond/storage/parsafiler2/simics_images/4cores", 
       "input_ckpt_file": "ready_4cores_4GB_LDD", 
       "load_same_level_ckpt": false, 
-      "guest_cmd": "\"/host/home/drumond/storage/parsafiler2/mondrian-experiments/resources/bins/mchashjoins_nmp_4cores -r 131072 -s 131070 -n 1 -a PRH --join \\n\"", 
-      "base_run_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/debug/nmp/run", 
-      "base_ckpt_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/debug/nmp/ckpts",
+      "guest_cmd": "\"/host/home/drumond/storage/parsafiler2/mondrian-experiments/resources/bins/mchashjoins_nmp_4cores -r 131072 -s 131070 -n 4 -a PRH --join \\n\"", 
+      "base_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/debug/nmp", 
       "classes": [
           "phase", 
           "flexpoint", 
@@ -25,9 +24,8 @@
       "input_ckpt_folder": "/home/drumond/storage/parsafiler2/simics_images/4cores", 
       "input_ckpt_file": "ready_4cores_4GB_LDD", 
       "load_same_level_ckpt": false, 
-      "guest_cmd": "\"/host/home/drumond/storage/parsafiler2/mondrian-experiments/resources/bins/mchashjoins_nmp_4cores -r 131072 -s 131070 -n 1 -a PRH --join --permutative-reorder\\n\"", 
-      "base_run_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/debug/nmp/run", 
-      "base_ckpt_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/debug/nmp/ckpts",
+      "guest_cmd": "\"/host/home/drumond/storage/parsafiler2/mondrian-experiments/resources/bins/mchashjoins_nmp_4cores -r 131072 -s 131070 -n 4 -a PRH --join --permutative-reorder\\n\"", 
+      "base_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/debug/nmp",
       "classes": [
           "phase", 
           "flexpoint", 

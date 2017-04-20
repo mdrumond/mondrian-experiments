@@ -1,0 +1,115 @@
+run-command-file "base-user-postload.simics"
+
+
+# BPWarm [trace]
+flexus.set "-L2:CMPWidth"                                       "0" # "Number of cores per CMP chip (0 = sys width)" (CMPWidth) *TODO: #cores for trace*
+
+# SplitDestinationMapper [timing]
+flexus.set "-net-mapper:Banks"                                  "0" # "Number of cores" (Cores) *TODO: #cores for timing*
+flexus.set "-net-mapper:Directories"                            "0" # "Number of directories" (Directories) *TODO: #cores for timing*
+
+flexus.set "-L2:data_lat"                                        "8"
+flexus.set "-L2:tag_lat"                                        "4" # "Total latency of tag array lookup" (TagLatency)
+
+######## NMP Sepcific configs
+flexus.set "-net-mapper:gzip_flexpoints"                          "0"
+flexus.set "-net-mapper:text_flexpoints"                           "1"
+
+flexus.set "-magic-break:SmartNics"                           "2"
+flexus.set "-net-mapper:SmartNics"                           "4"
+flexus.set "-net-mapper:SmartNicLocation"                    "0,1,2,3"
+
+flexus.set "-net-mapper:VaultDestinationFromBP"               "0"
+
+
+# Kill directories
+flexus.set "-net-mapper:Directories"                          "0"
+flexus.set "-net-mapper:DirLocation"                          ""
+
+# Number of vaults
+
+# NMPSmartNic
+flexus.set "-nmp-smart-nic:MaxRequests"                      "128"
+
+# Batch unroller
+# Original memory size in MB. The batch unroller doubles it and uses the second
+# half of the addr space to avoid conflicts between batched and unbatched accesses
+flexus.set "-batch-unroller:OriginalMemorySize"            "2048" 
+flexus.set "-batch-unroller:MemAccessSize"         "64"
+flexus.set "-batch-unroller:MaxRequests"           "64"
+flexus.set "-batch-unroller:MaxReplies"            "64"
+flexus.set "-batch-unroller:MaxInflightBatches"    "2"
+flexus.set "-batch-unroller:MessagesPerCycle"      "1"
+flexus.set "-batch-unroller:OutBufferStart"         "32768"
+
+# DRAMSim
+# [timing]
+flexus.set "-memory:device-file"             "NMP_Vault_512MB.ini"
+flexus.set "-memory:memory-system-file"      "system_offchip.ini"
+flexus.set "-memory:interleaving"                            "0" # address interleaving for memory controllers (in bytes)
+flexus.set "-memory:dyn_size"                                "0" # "Size per memory controller in MB"
+flexus.set "-memory:max_replies"                             "64" # "Maximum replies queued in loopback" (MaxReplies)
+flexus.set "-memory:max_requests"                            "128" # "Maximum requests queued in loopback" (MaxRequests)
+flexus.set "-ufetch:CPULocation"                                   "" 
+
+flexus.set "-magic-break:acc_tracking"                               "1"
+flexus.set "-magic-break:nmp_tracking"                               "1"
+
+flexus.set "-mmu:MMU"                     "0"
+flexus.set "-mmu:TLP"                     "2"       
+flexus.set "-mmu:NumTLB"                  "1"                  # (NumTLB) Number of TLBs (i.e., levels), 1: TLB, 2: TLB + STLB
+flexus.set "-mmu:NumMMUCache"              "0"    
+flexus.set "-mmu:MMUCacheEntries"              ""    
+flexus.set "-mmu:MMUCacheAssoc"              ""    
+flexus.set "-mmu:perfmmu"              "0"
+
+
+# Core width params
+flexus.set "-fag:bpreds"                                        "8" # "Max branches predicted per cycle" (MaxBPred)
+flexus.set "-fag:faddrs"                                        "8" # "Max fetch addresses generated per cycle" (MaxFetchAddress)
+flexus.set "-ufetch:finst"                                      "8" # "Max instructions fetched per cycle" (MaxFetchInstructions)
+flexus.set "-uarch:consistency"                                 "2" # "Consistency Model" (ConsistencyModel)
+flexus.set "-uarch:numIntAlu"                                   "7" # "Number of integer ALUs" (NumIntAlu)
+flexus.set "-uarch:numIntMult"                                  "1" # "Number of integer MUL/DIV units" (NumIntMult)
+flexus.set "-uarch:numFpAlu"                                    "1" # "Number of FP ALUs" (NumFpAlu)
+flexus.set "-uarch:numFpMult"                                   "1" # "Number of FP MUL/DIV units" (NumFpMult)
+
+flexus.set "-mondrian-engine:Cores"                              "1" #
+flexus.set "-mondrian-engine:AluWidth"                           "8" #
+flexus.set "-mondrian-engine:MaxInputStreams"                    "8" #
+flexus.set "-mondrian-engine:MaxOutputStreams"                   "8" #
+flexus.set "-mondrian-engine:TableFile"                          "none" #
+flexus.set "-mondrian-engine:QueueSizes"                          "8" #
+
+
+flexus.set "-memory:size"                                    "2048" # "Total memory size in MB"
+
+flexus.set "-mondrian-engine:RowBufferSize"                      "512" #
+flexus.set "-nmp-smart-nic:BatchSize"                        "512"
+flexus.set "-batch-unroller:BatchSize"             "512"
+flexus.set "-mondrian-engine:TupleSize"                          "16" #
+flexus.set "-batch-unroller:DestAddressedRequestSize"    "16"
+
+flexus.set "-batch-unroller:OutBufferStart"         "2097152"
+flexus.set "-mondrian-engine:NumTuples"                          "131072" # Size of both tables for join
+flexus.set "-mondrian-engine:Mode"                               "partition" #
+flexus.set "-mondrian-engine:WidthUsed"                   "4" #
+
+
+#core count
+flexus.set "-bpwarm:cores"                                      "1" # "Number of cores" (Cores) *TODO: #cores for trace simulation*
+
+flexus.set "-feeder:CMPwidth"                                   "1" # "Number of cores per CMP chip (0 = sys width)" (CMPWidth) *TODO: #cores for trace simulation*
+
+flexus.set "-L2:cores"                                          "1" # "Number of l1 caches" (Cores x 2) *TODO: 2x#cores, L1-I and L1-D*
+flexus.set "-network:nodes"                                    "4" # "Number of Nodes" (NumNodes) *TODO: 4x#cores Memory, L1-D, Directory per CMP tile*
+flexus.set "-net-mapper:Cores"                                  "4" # "Number of cores" (Cores) *TODO: #cores for timing*
+flexus.set "-net-mapper:MemControllers"                         "4" # "Number of memory controllers" (MemControllers)
+flexus.set "-net-mapper:MemLocation"                            "0,1,2,3" # "Memory controller locations (ex: '8,15,24,31,32,39,48,55')" (MemLocation)
+flexus.set "-memory-map:nodes"                                  "4" # "Number of Nodes" (NumNodes) *TODO: #cores for timing*
+flexus.set "-net-mapper:NumOfVaultsPerHMC"                    "2"
+flexus.set "-network:nodes"                                 "16" # Total number of nodes (DIR,MEM,CACHE,SMART_NIC)
+flexus.set "-net-mapper:NICTopologyFile"                 "2x2x4.topologyEdge"
+flexus.set "-network:topology-file"                      "2x2x4.topology"
+flexus.set "-nmp-smart-nic:NumberOfVaults"                    "4"
+flexus.set "-mondrian-engine:VaultsSystem"                        "4" #

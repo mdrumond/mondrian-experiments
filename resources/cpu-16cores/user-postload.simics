@@ -1,0 +1,32 @@
+run-command-file "base-user-postload.simics"
+
+
+# BPWarm [trace]
+flexus.set "-bpwarm:cores"                                      "16" # "Number of cores" (Cores) *TODO: #cores for trace simulation*
+
+flexus.set "-feeder:CMPwidth"                                   "16" # "Number of cores per CMP chip (0 = sys width)" (CMPWidth) *TODO: #cores for trace simulation*
+
+flexus.set "-L2:cores"                                          "32" # "Number of l1 caches" (Cores x 2) *TODO: 2x#cores, L1-I and L1-D*
+flexus.set "-network:nodes"                                    "48" # "Number of Nodes" (NumNodes) *TODO: 3x#cores Memory, L1-D, Directory per CMP tile*
+flexus.set "-network:topology-file"            "16x3-mesh.topology" # "Network topology file" (NetworkTopologyFile) *TODO: Topology*
+flexus.set "-L2:CMPWidth"                                       "16" # "Number of cores per CMP chip (0 = sys width)" (CMPWidth) *TODO: #cores for trace*
+
+# SplitDestinationMapper [timing]
+flexus.set "-net-mapper:Cores"                                  "16" # "Number of cores" (Cores) *TODO: #cores for timing*
+flexus.set "-net-mapper:Banks"                                  "16" # "Number of cores" (Cores) *TODO: #cores for timing*
+flexus.set "-net-mapper:Directories"                            "16" # "Number of directories" (Directories) *TODO: #cores for timing*
+flexus.set "-net-mapper:MemControllers"                         "4" # "Number of memory controllers" (MemControllers)
+flexus.set "-net-mapper:MemLocation"                      "0,3,12,15" # "Memory controller locations (ex: '8,15,24,31,32,39,48,55')" (MemLocation)
+flexus.set "-memory-map:nodes"                                  "64" # "Number of Nodes" (NumNodes) *TODO: #cores for timing*
+
+### DRAMSim
+# [timing]
+flexus.set "-memory:device-file"             "DDR3_micron_hmc.ini"
+flexus.set "-memory:memory-system-file"        "system_offchip.ini"
+flexus.set "-memory:size"                                    "65536" # "Total memory size in MB"
+
+flexus.set "-L2:data_lat"                                       "4"
+flexus.set "-L2:tag_lat"                                        "1" # "Total latency of tag array lookup" (TagLatency)
+
+flexus.set "-memory:frequency"                               "2000" # "CPU frequency" *TODO: For DRAMSim2, adjust*
+

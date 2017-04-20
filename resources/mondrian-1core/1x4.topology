@@ -1,0 +1,27 @@
+# Boilerplate stuff
+IntraLatency 1
+InterLatency 30
+ChannelLatency 3
+ChannelLatencyData 4
+ChannelLatencyControl 1
+LocalChannelLatencyDivider 1
+SwitchInputBuffers 6
+SwitchOutputBuffers 6
+SwitchInternalBuffersPerVC 6
+
+# Basic Switch/Node connections
+NumNodes 4
+NumSwitches 1
+SwitchPorts  12
+SwitchBandwidth 4
+
+Top Node 0 -> Switch 0:0
+Top Node 1 -> Switch 0:1
+Top Node 2 -> Switch 0:2
+Top Node 3 -> Switch 0:3
+
+# Switch 0 -> *
+Route Switch 0 -> 0 { 0:0 } 
+Route Switch 0 -> 1 { 1:0 } 
+Route Switch 0 -> 2 { 2:0 } 
+Route Switch 0 -> 3 { 3:0 } 

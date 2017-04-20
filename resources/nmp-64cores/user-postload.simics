@@ -1,0 +1,85 @@
+run-command-file "base-user-postload.simics"
+
+
+# BPWarm [trace]
+flexus.set "-bpwarm:cores"                                      "64" # "Number of cores" (Cores) *TODO: #cores for trace simulation*
+
+flexus.set "-feeder:CMPwidth"                                   "64" # "Number of cores per CMP chip (0 = sys width)" (CMPWidth) *TODO: #cores for trace simulation*
+
+flexus.set "-L2:cores"                                          "128" # "Number of l1 caches" (Cores x 2) *TODO: 2x#cores, L1-I and L1-D*
+flexus.set "-L2:CMPWidth"                                       "64" # "Number of cores per CMP chip (0 = sys width)" (CMPWidth) *TODO: #cores for trace*
+
+# SplitDestinationMapper [timing]
+flexus.set "-net-mapper:Cores"                                  "64" # "Number of cores" (Cores) *TODO: #cores for timing*
+flexus.set "-net-mapper:Banks"                                  "0" # "Number of cores" (Cores) *TODO: #cores for timing*
+flexus.set "-net-mapper:Directories"                            "0" # "Number of directories" (Directories) *TODO: #cores for timing*
+flexus.set "-net-mapper:MemControllers"                         "64" # "Number of memory controllers" (MemControllers)
+flexus.set "-net-mapper:MemLocation"                      "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63" # "Memory controller locations (ex: '8,15,24,31,32,39,48,55')" (MemLocation)
+flexus.set "-memory-map:nodes"                                  "64" # "Number of Nodes" (NumNodes) *TODO: #cores for timing*
+
+flexus.set "-L2:data_lat"                                        "8"
+flexus.set "-L2:tag_lat"                                        "4" # "Total latency of tag array lookup" (TagLatency)
+
+######## NMP Sepcific configs
+flexus.set "-net-mapper:gzip_flexpoints"                          "0"
+flexus.set "-net-mapper:text_flexpoints"                           "1"
+
+flexus.set "-magic-break:SmartNics"                           "16"
+flexus.set "-net-mapper:SmartNics"                            "16"
+flexus.set "-net-mapper:SmartNicLocation"                     "12,0,3,15,28,16,19,31,44,32,35,47,60,48,51,63"
+flexus.set "-net-mapper:NumOfVaultsPerHMC"                         "16"
+
+flexus.set "-L1d:ScratchpadSize"                             "128"
+
+# Kill directories
+flexus.set "-net-mapper:Directories"                          "0"
+flexus.set "-net-mapper:DirLocation"                          ""
+
+# Number of vaults
+flexus.set "-network:nodes"                                 "256" # Total number of nodes (DIR,MEM,CACHE,SMART_NIC)
+flexus.set "-net-mapper:NICTopologyFile"                 "16x4x4-mesh-dragon.topologyEdge"
+flexus.set "-network:topology-file"                      "16x4x4-mesh-dragon.topology"
+
+# NMPSmartNic
+flexus.set "-nmp-smart-nic:NumberOfVaults"                    "64"
+flexus.set "-nmp-smart-nic:BatchSize"                    "256"
+flexus.set "-nmp-smart-nic:MaxRequests"                      "64"
+
+# Batch unroller
+# Original memory size in MB. The batch unroller doubles it and uses the second
+# half of the addr space to avoid conflicts between batched and unbatched accesses
+flexus.set "-batch-unroller:OriginalMemorySize"            "65536"
+flexus.set "-batch-unroller:MemAccessSize"         "8"
+flexus.set "-batch-unroller:BatchSize"             "256"
+flexus.set "-batch-unroller:MaxRequests"           "64"
+flexus.set "-batch-unroller:MaxReplies"            "64"
+flexus.set "-batch-unroller:MaxInflightBatches"    "2"
+flexus.set "-batch-unroller:MessagesPerCycle"      "1"
+
+# DRAMSim
+# [timing]
+flexus.set "-memory:device-file"             "NMP_Vault_512MB.ini"
+flexus.set "-memory:memory-system-file"      "system_offchip.ini"
+flexus.set "-memory:interleaving"                            "1792" # address interleaving for memory controllers (in bytes)
+flexus.set "-memory:dyn_size"                                "0" # "Size per memory controller in MB"
+flexus.set "-memory:size"                                    "65536" # "Total memory size in MB"
+flexus.set "-memory:max_replies"                              "256" # "Maximum replies queued in loopback" (MaxReplies)
+flexus.set "-memory:max_requests"                             "256" # "Maximum requests queued in loopback" (MaxRequests)
+flexus.set "-L1d:dummy_cache"             "0"                  # (DummyCache) Make
+flexus.set "-L1d:UseMondrian"             "0"                  # Use mondrian memory accesses
+flexus.set "-ufetch:CPULocation"                                   "" 
+flexus.set "-L1d:CPULocation"                                      ""
+flexus.set "-L1d:numOfCores"                                    "1"
+
+flexus.set "-magic-break:acc_tracking"                               "1"
+flexus.set "-magic-break:nmp_tracking"                               "1"
+
+flexus.set "-mmu:MMU"                     "0"
+flexus.set "-mmu:TLP"                     "2"       
+flexus.set "-mmu:NumTLB"                  "1"                  # (NumTLB) Number of TLBs (i.e., levels), 1: TLB, 2: TLB + STLB
+flexus.set "-mmu:NumMMUCache"              "0"    
+flexus.set "-mmu:MMUCacheEntries"              ""    
+flexus.set "-mmu:MMUCacheAssoc"              ""    
+flexus.set "-mmu:perfmmu"              "0"
+
+

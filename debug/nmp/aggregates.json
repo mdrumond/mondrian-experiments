@@ -1,0 +1,22 @@
+[
+    {
+        "name": "nmp_loopback_base_4core_4MB_join", 
+        "dut_name": "nmp-loopback-4core",
+        "jobset_name": "nmp_base_4core_4MB_join",
+        "obj_type": "JobAggregate", 
+        "hier_ranges": [
+            {"obj_type" : "HierRange",
+             "levels" : [], "ckpt_count" : 3}
+        ]
+    },
+    {
+        "name": "nmp_loopback_base_4core_4MB_join_pp", 
+        "dut_name": "nmp-loopback-4core-pp",
+        "jobset_name": "nmp_base_4core_4MB_join_pp",
+        "obj_type": "JobAggregate", 
+        "hier_ranges": [
+            {"obj_type" : "HierRange",
+             "levels" : [], "ckpt_count" : 3}
+        ]
+    }
+]

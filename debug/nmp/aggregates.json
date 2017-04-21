@@ -8,7 +8,23 @@
             {"obj_type" : "HierRange",
              "levels" : [], "ckpt_count" : 3},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1]], "ckpt_count" : 1, "inst_per_ckpt" : 400000}            
+             "levels" : [[1,1]], "ckpt_count" : 1, "inst_per_ckpt" : 400000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,0]]}
+        ]
+    },
+    {
+        "name": "nmp_loopback_base_4core_4MB_join_dramsim", 
+        "dut_name": "nmp-dramsim-4core",
+        "jobset_name": "nmp_base_4core_4MB_join_dramsim",
+        "obj_type": "JobAggregate", 
+        "hier_ranges": [
+            {"obj_type" : "HierRange",
+             "levels" : [], "ckpt_count" : 3},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1]], "ckpt_count" : 1, "inst_per_ckpt" : 400000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,0]]}
         ]
     },
     {
@@ -20,7 +36,24 @@
             {"obj_type" : "HierRange",
              "levels" : [], "ckpt_count" : 3},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1]], "ckpt_count" : 1, "inst_per_ckpt" : 400000}
+             "levels" : [[1,1]], "ckpt_count" : 1, "inst_per_ckpt" : 400000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,0]]}            
+        ]
+    },
+    {
+        "name": "nmp_loopback_base_4core_4MB_join_pp_dramsim", 
+        "dut_name": "nmp-dramsim-4core-pp",
+        "jobset_name": "nmp_base_4core_4MB_join_pp_dramsim",
+        "obj_type": "JobAggregate", 
+        "hier_ranges": [
+            {"obj_type" : "HierRange",
+             "levels" : [], "ckpt_count" : 3},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1]], "ckpt_count" : 1, "inst_per_ckpt" : 400000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,0]]}            
         ]
     }
+    
 ]

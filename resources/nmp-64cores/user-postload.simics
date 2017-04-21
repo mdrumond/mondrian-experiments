@@ -48,13 +48,16 @@ flexus.set "-nmp-smart-nic:MaxRequests"                      "64"
 # Batch unroller
 # Original memory size in MB. The batch unroller doubles it and uses the second
 # half of the addr space to avoid conflicts between batched and unbatched accesses
-flexus.set "-batch-unroller:OriginalMemorySize"            "65536"
-flexus.set "-batch-unroller:MemAccessSize"         "8"
+flexus.set "-batch-unroller:OriginalMemorySize"            "512" 
+flexus.set "-batch-unroller:MemAccessSize"         "64"
 flexus.set "-batch-unroller:BatchSize"             "256"
-flexus.set "-batch-unroller:MaxRequests"           "64"
-flexus.set "-batch-unroller:MaxReplies"            "64"
+flexus.set "-batch-unroller:MaxRequests"           "128"
+flexus.set "-batch-unroller:MaxReplies"            "128"
 flexus.set "-batch-unroller:MaxInflightBatches"    "2"
 flexus.set "-batch-unroller:MessagesPerCycle"      "1"
+flexus.set "-batch-unroller:OutBufferStart"         "32768"
+flexus.set "-batch-unroller:BatchSize"             "512"
+flexus.set "-batch-unroller:DestAddressedRequestSize"    "16"
 
 # DRAMSim
 # [timing]
@@ -82,4 +85,4 @@ flexus.set "-mmu:MMUCacheEntries"              ""
 flexus.set "-mmu:MMUCacheAssoc"              ""    
 flexus.set "-mmu:perfmmu"              "0"
 
-
+flexus.set "-addr-to-vault-map:VaultsSystem"                "64"

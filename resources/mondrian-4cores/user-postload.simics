@@ -49,7 +49,7 @@ flexus.set "-memory:memory-system-file"      "system_offchip.ini"
 flexus.set "-memory:interleaving"                            "0" # address interleaving for memory controllers (in bytes)
 flexus.set "-memory:dyn_size"                                "0" # "Size per memory controller in MB"
 flexus.set "-memory:max_replies"                             "64" # "Maximum replies queued in loopback" (MaxReplies)
-flexus.set "-memory:max_requests"                            "128" # "Maximum requests queued in loopback" (MaxRequests)
+flexus.set "-memory:max_requests"                            "256" # "Maximum requests queued in loopback" (MaxRequests)
 flexus.set "-ufetch:CPULocation"                                   "" 
 
 flexus.set "-magic-break:acc_tracking"                               "1"
@@ -91,13 +91,13 @@ flexus.set "-mondrian-engine:TupleSize"                          "16" #
 flexus.set "-batch-unroller:DestAddressedRequestSize"    "16"
 
 flexus.set "-batch-unroller:OutBufferStart"         "2097152"
-flexus.set "-mondrian-engine:NumTuples"                          "131072" # Size of both tables for join
-flexus.set "-mondrian-engine:Mode"                               "partition" #
+flexus.set "-mondrian-engine:NumTuples"                          "8192" # Size of both tables for join
+flexus.set "-mondrian-engine:Mode"                               "partition_no_permute" #
 flexus.set "-mondrian-engine:WidthUsed"                   "4" #
 
 
 #core count
-flexus.set "-bpwarm:cores"                                      "1" # "Number of cores" (Cores) *TODO: #cores for trace simulation*
+flexus.set "-bpwarm:cores"                                      "4" # "Number of cores" (Cores) *TODO: #cores for trace simulation*
 
 flexus.set "-feeder:CMPwidth"                                   "1" # "Number of cores per CMP chip (0 = sys width)" (CMPWidth) *TODO: #cores for trace simulation*
 

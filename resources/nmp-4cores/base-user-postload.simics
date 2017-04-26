@@ -81,7 +81,7 @@ flexus.set "-decoder:multithread"                               "0" # "Enable mu
 # uArch [timing]
 
 flexus.set "-uarch:retire"                                      "2" # "Retirement width" (RetireWidth)
-flexus.set "-uarch:rob"                                         "512" # "Reorder buffer size" (ROBSize)
+flexus.set "-uarch:rob"                                         "48" # "Reorder buffer size" (ROBSize)
 flexus.set "-uarch:sb"                                         "16" # "Store buffer size" (SBSize)
 flexus.set "-uarch:naw_bypass_sb"                               "0" # "Allow Non-Allocating-Writes to bypass store-buffer" (NAWBypassSB)
 flexus.set "-uarch:naw_wait_at_sync"                            "0" # "Force MEMBAR #Sync to wait for non-allocating writes to finish" (NAWWaitAtSync)

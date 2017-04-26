@@ -74,6 +74,153 @@
           "inst", 
           "none"
       ]
+  },
+  {
+      "job_name": "nmp_base_64core_128MB_join", 
+      "obj_type": "FlexusJobSet", 
+      "input_ckpt_folder": "/home/drumond/storage/parsafiler2/simics_images/64core_machine", 
+      "input_ckpt_file": "ready", 
+      "load_same_level_ckpt": false, 
+      "guest_cmd": "\"/host/home/drumond/storage/parsafiler2/mondrian-experiments/resources/bins/mchashjoins_nmp_64cores -r 268435456 -s 268435456 -n 64 -a PRH --join \\n\"", 
+      "base_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/experiments/nmp", 
+      "classes": [
+          "phase", 
+          "subphase", 
+          "flexpoint", 
+          "timing"
+      ], 
+      "classes_ckpt_type": [
+          "bp", 
+          "inst", 
+          "inst", 
+          "none"
+      ]
+  },
+  {
+      "job_name": "nmp_base_64core_128MB_join_pp", 
+      "obj_type": "FlexusJobSet", 
+      "input_ckpt_folder": "/home/drumond/storage/parsafiler2/simics_images/64core_machine", 
+      "input_ckpt_file": "ready", 
+      "load_same_level_ckpt": false, 
+      "guest_cmd": "\"/host/home/drumond/storage/parsafiler2/mondrian-experiments/resources/bins/mchashjoins_nmp_64cores -r 268435456 -s 268435456 -n 64 -a PRH --join --permutative-reorder\\n\"", 
+      "base_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/experiments/nmp",
+      "classes": [
+          "phase", 
+          "subphase", 
+          "flexpoint", 
+          "timing"
+      ], 
+      "classes_ckpt_type": [
+          "bp", 
+          "inst", 
+          "inst", 
+          "none"
+      ]
+  },
+  {
+      "job_name": "mondrian_4core_4MB", 
+      "obj_type": "FlexusJobSet", 
+      "input_ckpt_folder": "/home/drumond/storage/parsafiler2/simics_images/4cores", 
+      "input_ckpt_file": "ready_4cores_4GB_LDD", 
+      "load_same_level_ckpt": false, 
+      "guest_cmd": "", 
+      "base_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/debug/mondrian", 
+      "classes": [
+          "phase", 
+          "flexpoint", 
+          "timing"
+      ], 
+      "classes_ckpt_type": [
+          "inst", 
+          "inst", 
+          "none"
+      ]
+  },
+  {
+      "job_name": "cpu_16core_4096MB_join", 
+      "input_ckpt_file": "base_16cores_64GB_ready", 
+      "input_ckpt_folder": "/home/drumond/storage/parsafiler2/simics_images/16_cores", 
+      "obj_type": "FlexusJobSet", 
+      "base_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/experiments/cpu",
+      "classes": [
+          "phase", 
+          "subphase", 
+          "flexpoint", 
+          "timing"
+      ], 
+      "classes_ckpt_type": [
+          "bp", 
+          "inst", 
+          "inst", 
+          "none"
+      ], 
+      "load_same_level_ckpt": false, 
+      "guest_cmd": "\"/host/home/drumond/storage/parsafiler2/mondrian-experiments/resources/bins/mchashjoins_cpu -r 268435456 -s 268435456 -n 16 -a PRH --join \\n\"" 
+  },
+  {
+      "job_name": "cpu_16core_4096MB_sort", 
+      "input_ckpt_file": "base_16cores_64GB_ready", 
+      "input_ckpt_folder": "/home/drumond/storage/parsafiler2/simics_images/16_cores", 
+      "obj_type": "FlexusJobSet", 
+      "base_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/experiments/cpu",
+      "classes": [
+          "phase", 
+          "subphase", 
+          "flexpoint", 
+          "timing"
+      ], 
+      "classes_ckpt_type": [
+          "bp", 
+          "inst", 
+          "inst", 
+          "none"
+      ], 
+      "load_same_level_ckpt": false, 
+      "guest_cmd": "\"/host/home/drumond/storage/parsafiler2/mondrian-experiments/resources/bins/mchashjoins_cpu -r 268435456 -s 268435456 -n 16 -a PRH --sort \\n\"" 
+  },
+  {
+      "job_name": "cpu_16core_4096MB_scan", 
+      "input_ckpt_file": "base_16cores_64GB_ready", 
+      "input_ckpt_folder": "/home/drumond/storage/parsafiler2/simics_images/16_cores",
+      "obj_type": "FlexusJobSet", 
+      "base_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/experiments/cpu",
+      "classes": [
+          "phase", 
+          "subphase", 
+          "flexpoint", 
+          "timing"
+      ], 
+      "classes_ckpt_type": [
+          "bp", 
+          "inst", 
+          "inst", 
+          "none"
+      ], 
+      "load_same_level_ckpt": false, 
+      "guest_cmd": "\"/host/home/drumond/storage/parsafiler2/mondrian-experiments/resources/bins/mchashjoins_cpu -r 268435456 -s 268435456 -n 16 -a PRH --scan \\n\"" 
+  },
+  {
+      "job_name": "cpu_16core_4096MB_gby", 
+      "input_ckpt_file": "base_16cores_64GB_ready", 
+      "input_ckpt_folder": "/home/drumond/storage/parsafiler2/simics_images/16_cores", 
+      "obj_type": "FlexusJobSet", 
+      "base_folder": "/home/drumond/storage/parsafiler2/mondrian-experiments/experiments/cpu",
+      "classes": [
+          "phase", 
+          "subphase", 
+          "flexpoint", 
+          "timing"
+      ], 
+      "classes_ckpt_type": [
+          "bp", 
+          "inst", 
+          "inst", 
+          "none"
+      ], 
+      "load_same_level_ckpt": false, 
+      "guest_cmd": "\"/host/home/drumond/storage/parsafiler2/mondrian-experiments/resources/bins/mchashjoins_cpu -r 268435456 -s 268435456 -n 16 -a PRH --gby \\n\"" 
   }    
+    
+    
     
 ]

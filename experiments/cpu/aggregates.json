@@ -1,0 +1,66 @@
+[
+    {
+        "name": "cpu_16core_4096MB_join", 
+        "dut_name": "cpu-16cores",
+        "jobset_name": "cpu_16core_4096MB_join", 
+        "obj_type": "JobAggregate", 
+        "hier_ranges": [
+            {"obj_type" : "HierRange",
+             "levels" : [], "ckpt_count" : 4},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1]], "ckpt_count" : 16, "inst_per_ckpt" : 60000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,15]], "ckpt_count" : 6, "inst_per_ckpt" : 10000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,15],[0,5]]}
+        ]
+    },
+    {
+        "name": "cpu_16core_4096MB_sort", 
+        "dut_name": "cpu-16cores",
+        "jobset_name": "cpu_16core_4096MB_sort", 
+        "obj_type": "JobAggregate", 
+        "hier_ranges": [
+            {"obj_type" : "HierRange",
+             "levels" : [], "ckpt_count" : 4},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1]], "ckpt_count" : 16, "inst_per_ckpt" : 60000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,15]], "ckpt_count" : 6, "inst_per_ckpt" : 10000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,15],[0,5]]}
+        ]
+    },
+    {
+        "name": "cpu_16core_4096MB_scan", 
+        "dut_name": "cpu-16cores",
+        "jobset_name": "cpu_16core_4096MB_scan", 
+        "obj_type": "JobAggregate", 
+        "hier_ranges": [
+            {"obj_type" : "HierRange",
+             "levels" : [], "ckpt_count" : 2},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1]], "ckpt_count" : 16, "inst_per_ckpt" : 60000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,15]], "ckpt_count" : 6, "inst_per_ckpt" : 10000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,15],[0,5]]}
+        ]
+    },
+    {
+        "name": "cpu_16core_4096MB_gby", 
+        "dut_name": "cpu-16cores",
+        "jobset_name": "cpu_16core_4096MB_gby", 
+        "obj_type": "JobAggregate", 
+        "hier_ranges": [
+            {"obj_type" : "HierRange",
+             "levels" : [], "ckpt_count" : 4},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1]], "ckpt_count" : 16, "inst_per_ckpt" : 60000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,15]], "ckpt_count" : 6, "inst_per_ckpt" : 10000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,15],[0,5]]}
+        ]
+    }
+]

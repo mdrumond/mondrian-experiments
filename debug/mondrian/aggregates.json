@@ -1,0 +1,16 @@
+[
+    {
+        "name": "mondrian_loopback__4core_4MB", 
+        "dut_name": "mondrian-4core",
+        "jobset_name": "mondrian_4core_4MB",
+        "obj_type": "JobAggregate", 
+        "hier_ranges": [
+            {"obj_type" : "HierRange",
+             "levels" : [], "ckpt_count" : 1, "inst_per_ckpt" : 1000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[0,0]], "ckpt_count" : 1, "inst_per_ckpt" : 1000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[0,0],[0,0]]}
+        ]
+    }    
+]

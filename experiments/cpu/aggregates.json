@@ -8,11 +8,11 @@
             {"obj_type" : "HierRange",
              "levels" : [], "ckpt_count" : 4},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1]], "ckpt_count" : 16, "inst_per_ckpt" : 60000000},
+             "levels" : [[2,2]], "ckpt_count" : 50, "inst_per_ckpt" : 100000000},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1],[0,15]], "ckpt_count" : 6, "inst_per_ckpt" : 10000000},
+             "levels" : [[2,2],[0,10]], "ckpt_count" : 1, "inst_per_ckpt" : 64000000},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1],[0,15],[0,5]]}
+             "levels" : [[2,2],[0,10],[0,1]]}
         ]
     },
     {
@@ -24,11 +24,11 @@
             {"obj_type" : "HierRange",
              "levels" : [], "ckpt_count" : 4},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1]], "ckpt_count" : 16, "inst_per_ckpt" : 60000000},
+             "levels" : [[2,2]], "ckpt_count" : 50, "inst_per_ckpt" : 113500000},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1],[0,15]], "ckpt_count" : 6, "inst_per_ckpt" : 10000000},
+             "levels" : [[2,2],[0,13]], "ckpt_count" : 1, "inst_per_ckpt" : 75800000},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1],[0,15],[0,5]]}
+             "levels" : [[2,2],[0,13],[0,1]]}
         ]
     },
     {
@@ -40,11 +40,11 @@
             {"obj_type" : "HierRange",
              "levels" : [], "ckpt_count" : 2},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1]], "ckpt_count" : 16, "inst_per_ckpt" : 60000000},
+             "levels" : [[0,0]], "ckpt_count" : 5, "inst_per_ckpt" : 20000000},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1],[0,15]], "ckpt_count" : 6, "inst_per_ckpt" : 10000000},
+             "levels" : [[0,0],[0,4]], "ckpt_count" : 3, "inst_per_ckpt" : 5000000},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1],[0,15],[0,5]]}
+             "levels" : [[0,0],[0,4],[0,2]]}
         ]
     },
     {
@@ -56,11 +56,23 @@
             {"obj_type" : "HierRange",
              "levels" : [], "ckpt_count" : 4},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1]], "ckpt_count" : 16, "inst_per_ckpt" : 60000000},
+             "levels" : [[0,0]], "ckpt_count" : 9, "inst_per_ckpt" : 45000000},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1],[0,15]], "ckpt_count" : 6, "inst_per_ckpt" : 10000000},
+             "levels" : [[0,0],[0,4]], "ckpt_count" : 3, "inst_per_ckpt" : 11250000},
             {"obj_type" : "HierRange",
-             "levels" : [[1,1],[0,15],[0,5]]}
+             "levels" : [[0,0],[0,4],[0,2]]},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1]], "ckpt_count" : 26, "inst_per_ckpt" : 105000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,4]], "ckpt_count" : 2, "inst_per_ckpt" : 35000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[1,1],[0,4],[0,1]]},
+            {"obj_type" : "HierRange",
+             "levels" : [[2,2]], "ckpt_count" : 38, "inst_per_ckpt" : 107000000},
+            {"obj_type" : "HierRange",
+             "levels" : [[2,2],[0,12]], "ckpt_count" : 1, "inst_per_ckpt" : 35600000},
+            {"obj_type" : "HierRange",
+             "levels" : [[2,2],[0,12],[0,1]]}
         ]
     }
 ]
